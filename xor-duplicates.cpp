@@ -23,6 +23,8 @@ int main() {
     try {
         long long n;
         cin >> n;
+        if (!cin or (n < 0 or n > 100000))
+                throw -1;
         vector<long long> arr(n);
         for (long long i = 0; i < n; i++) {
             cin >> arr[i];
