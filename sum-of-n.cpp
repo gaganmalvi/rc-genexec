@@ -1,6 +1,6 @@
 /*
     Author: DF
-    Question: Take XOR of all Numbers
+    Question: Sum Of N Numbers
 */
 
 // clang-format off
