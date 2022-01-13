@@ -1,6 +1,6 @@
 /*
     Author: DF
-    Question: Take XOR of all Numbers
+    Question: Binary Exponentiation
 */
 
 // clang-format off
