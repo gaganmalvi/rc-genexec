@@ -11,7 +11,7 @@ int32_t main() {
     try {
         int x, y;
         cin >> x >> y;
-        if (!cin or x < 1 or x > pow(10, 4) or y < 1 or y > pow(10, 5))
+        if (!cin || x < 1 || x > pow(10, 4) || y < 1 || y > pow(10, 5))
             throw -1;
 
         for (int i = 1; i <= y ; i++) {

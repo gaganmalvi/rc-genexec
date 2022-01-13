@@ -13,7 +13,7 @@ int32_t main() {
     try {
         string x, y;
         cin >> x;
-        if (!cin or x.length() < 1 or x.length() > 2*pow(10,5))
+        if (!cin || x.length() < 1 || x.length() > 2*pow(10,5))
             throw -1;
         y = x;
         reverse(y.begin(), y.end());

@@ -22,7 +22,7 @@ int32_t main() {
     try {
         int n;
         cin >> n;
-        if (!cin or n < 0 or n > pow(10,6))
+        if (!cin || n < 0 || n > pow(10,6))
             throw -1;
     
         cout << dtb(n) << el;

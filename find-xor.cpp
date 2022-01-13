@@ -11,7 +11,7 @@ int32_t main() {
     try {
         int x, y;
         cin >> x >> y;
-        if (!cin or x < 0 or x > pow(10, 6) or y < 0 or y > pow(10, 6))
+        if (!cin || x < 0 || x > pow(10, 6) || y < 0 || y > pow(10, 6))
             throw -1;
         cout <<  (int)(x ^ y) << el;
     }

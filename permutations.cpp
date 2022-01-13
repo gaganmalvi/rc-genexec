@@ -35,7 +35,7 @@ int32_t main() {
     try {
         string s;
         cin >> s;
-        if (!cin or s.length() < 1 or s.length() > pow(10,5))
+        if (!cin || s.length() < 1 || s.length() > pow(10,5))
             throw -1;
     
         cout << perm(s) << el;
