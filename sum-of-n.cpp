@@ -17,7 +17,6 @@ void solveMyProblem(vector<long long> &arr) {
 }
 
 int main() {
-    // Start Here
     FastIO;
     try {
         long long n;
