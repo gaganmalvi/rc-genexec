@@ -13,8 +13,9 @@ using namespace std;
 
 void solveMyProblem(long long n, vector<long long> &arr) {
     long long k = arr[0];
-    for (long long i = 1; i < n; i++)
-        k ^= arr[i];
+    for (long long i = 1; i < n; i++) {
+        k = k ^ arr[i];
+    }
     cout << k << el;
 }
 
@@ -23,7 +24,7 @@ int main() {
     try {
         long long n;
         cin >> n;
-        if (!cin || (n < 0 || n > 100000) || !(n & 1))
+        if (!cin || (n < 0 || n > 100000) || (n % 2 != 0))
             throw -1;
         vector<long long> arr(n);
         for (long long i = 0; i < n; i++) {
