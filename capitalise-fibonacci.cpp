@@ -50,7 +50,7 @@ int main() {
         }
 
         cout << "\n";
-        delete result;
+        delete[] result;
 
     } catch(...) {
         cout << "Invalid input. Please refer to the question description.\n";
