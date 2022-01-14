@@ -25,7 +25,7 @@ int main() {
             throw -1;
         vector<long long> arr(n);
         for (long long i = 0; i < n; i++) {
-            if ((!cin and i != n))
+            if ((!cin && i != n))
                 throw -1;
             cin >> arr[i];
             if ((arr[i] < 0 || arr[i] > 1000000000))

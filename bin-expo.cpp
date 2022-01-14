@@ -38,12 +38,12 @@ int main() {
             throw -1;
         vector<pair <long long, long long> > arr(n);
         for (long long i = 0; i < n; i++) {
-            if ((!cin and i != n))
+            if ((!cin && i != n))
                 throw -1;
             cin >> arr[i].first;
             if ((arr[i].first < 0 || arr[i].first > 99))
                 throw -1;
-            if ((!cin and i != n))
+            if ((!cin && i != n))
                 throw -1;
             cin >> arr[i].second;
             if ((arr[i].second < 0 || arr[i].second > 99))
