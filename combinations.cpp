@@ -4,7 +4,7 @@ using namespace std;
 long long factorial(int x) {
     long long result = 1;
     for(int i = 1; i <= x; i++) {
-        result = result * i;
+        result *= i;
     }
     return result;
 }
