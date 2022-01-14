@@ -10,7 +10,7 @@ using namespace std;
 
 long fact(long n) {
     long ans = 1;
-    for (int i = 1; i <= n; i++)
+    for (long i = 1; i <= n; i++)
         ans *= i;
     return ans;
 }
@@ -24,7 +24,7 @@ int perm(string str) {
     int f = 1;
     for (int i = 0; i < 26; i++)
         f *= fact(freq[i]);
-    return (int)fact(length) / f;
+    return (int)fact((long)length) / f;
 }
 
 int32_t main() {
