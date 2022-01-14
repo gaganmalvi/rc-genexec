@@ -3,7 +3,7 @@
 
 #define FastIO std::ios_base::sync_with_stdio(false); std::cin.tie(NULL); std::cout.tie(NULL)
 
-void solve(std::vector<std::vector<int>> matrix, int n, int m) {
+void solve(std::vector< std::vector<int> > matrix, int n, int m) {
 
     int i = 0, j = 0;
     int xLimit = n-1, yLimit = m-1;
@@ -71,7 +71,7 @@ int main() {
         for(int t = 0; t < test; t++) {
             int n,m;
             std::cin >> n >> m;
-            std::vector<std::vector<int>> matrix(n);
+            std::vector< std::vector<int> > matrix(n);
 
             if(!std::cin || n < 1 || n > 25 || m < 1 || m > 25) {
                 throw -2;

@@ -5,7 +5,7 @@
 
 void solve(int n) {
 
-    std::vector<std::vector<int>> lower_table;
+    std::vector< std::vector<int> > lower_table;
     
     for(int R = 0; R <= n; R++) {
         std::vector<int> row(2*n+1);
