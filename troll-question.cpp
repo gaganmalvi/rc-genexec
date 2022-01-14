@@ -31,8 +31,10 @@ int main() {
             throw -1;
         vector<long long> arr(n);
         for (long long i = 0; i < n; i++) {
+            if ((!cin and i != n))
+                throw -1;
             cin >> arr[i];
-            if ((!cin and i != n) or (arr[i] < -1e9 or arr[i] > 1e9))
+            if ((arr[i] < -1e9 or arr[i] > 1e9))
                 throw -1;
         }
         solveMyProblem(arr);

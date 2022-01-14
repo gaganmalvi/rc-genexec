@@ -38,11 +38,15 @@ int main() {
             throw -1;
         vector<pair <long long, long long> > arr(n);
         for (long long i = 0; i < n; i++) {
+            if ((!cin and i != n))
+                throw -1;
             cin >> arr[i].first;
-            if ((!cin and i != n) or (arr[i].first< 0 or arr[i].first > 99))
+            if ((arr[i].first < 0 or arr[i].first > 99))
+                throw -1;
+            if ((!cin and i != n))
                 throw -1;
             cin >> arr[i].second;
-            if ((!cin and i != n) or (arr[i].second< 0 or arr[i].second > 9))
+            if ((arr[i].second < 0 or arr[i].second > 99))
                 throw -1;
         }
         solveMyProblem(arr);
