@@ -27,14 +27,14 @@ int main() {
     try {
         long long n;
         cin >> n;
-        if (!cin or (n < 0 or n > 100000))
+        if (!cin || (n < 0 || n > 100000))
             throw -1;
         vector<long long> arr(n);
         for (long long i = 0; i < n; i++) {
             if ((!cin and i != n))
                 throw -1;
             cin >> arr[i];
-            if ((arr[i] < -1e9 or arr[i] > 1e9))
+            if ((arr[i] < -1e9 || arr[i] > 1e9))
                 throw -1;
         }
         solveMyProblem(arr);

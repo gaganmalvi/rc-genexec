@@ -34,19 +34,19 @@ int main() {
     try {
         long long n;
         cin >> n;
-        if (!cin or (n < 0 or n > 350000))
+        if (!cin || (n < 0 || n > 350000))
             throw -1;
         vector<pair <long long, long long> > arr(n);
         for (long long i = 0; i < n; i++) {
             if ((!cin and i != n))
                 throw -1;
             cin >> arr[i].first;
-            if ((arr[i].first < 0 or arr[i].first > 99))
+            if ((arr[i].first < 0 || arr[i].first > 99))
                 throw -1;
             if ((!cin and i != n))
                 throw -1;
             cin >> arr[i].second;
-            if ((arr[i].second < 0 or arr[i].second > 99))
+            if ((arr[i].second < 0 || arr[i].second > 99))
                 throw -1;
         }
         solveMyProblem(arr);
