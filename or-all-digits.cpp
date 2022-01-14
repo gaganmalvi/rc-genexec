@@ -16,7 +16,7 @@ void solveMyProblem(vector<long long> &arr) {
     for (long long i : arr) {
         string n = to_string(i);
         long long k = 0;
-        for (auto i : n)
+        for (char i : n)
             k |= (i - '0');
         cout << k << el;
     }
