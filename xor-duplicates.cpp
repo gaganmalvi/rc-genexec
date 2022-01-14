@@ -6,6 +6,7 @@
 // clang-format off
 #include <iostream>
 #include <vector>
+#include <string>
 using namespace std;
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define el '\n'
@@ -24,7 +25,7 @@ int main() {
     try {
         long long n;
         cin >> n;
-        if (!cin || (n < 0 || n > 100000) || (n % 2 != 0))
+        if (!cin || (n < 3 || n > 100000) || (n % 2 == 0))
             throw -1;
         vector<long long> arr(n);
         for (long long i = 0; i < n; i++) {
