@@ -3,8 +3,8 @@
 #include <unordered_map>
 using namespace std;
 bool checkAnagram(string a, string b) {
-    int len1 = a.length();
-    int len2 = b.length();
+    size_t len1 = a.length();
+    size_t len2 = b.length();
     if (len1 != len2) {
         return false;
     }
