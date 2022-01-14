@@ -23,7 +23,7 @@ int main() {
     try {
         long long n;
         cin >> n;
-        if (!cin or (n < 0 or n > 100000))
+        if (!cin or (n < 0 or n > 100000) or !(n & 1))
             throw -1;
         vector<long long> arr(n);
         for (long long i = 0; i < n; i++) {
