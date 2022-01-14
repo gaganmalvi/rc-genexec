@@ -8,7 +8,7 @@ int main() {
         string s;
         cin >> s;
 
-        int n = s.length();
+        size_t n = s.length();
         if(!cin || n < 1 || n > 1000) {
             throw -1;
         }
@@ -16,7 +16,7 @@ int main() {
         // check if string has all lowercase letters.
         // also store the string in a character array (more efficient than using cpp strings with the transform() method to solve the question)
 
-        char result[n+1];
+        char* result = new char[n+1];
         for(int i = 0; i < n; i++) {
             if(!(s[i] >= 'a' && s[i] <= 'z')) {
                 throw -2;
@@ -50,6 +50,7 @@ int main() {
         }
 
         cout << "\n";
+        delete result;
 
     } catch(...) {
         cout << "Invalid input. Please refer to the question description.\n";
