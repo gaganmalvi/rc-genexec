@@ -1,42 +1,35 @@
-#include<iostream>
-#include<cstring>
-#include<cmath>
+#include <cmath>
+#include <cstring>
+#include <iostream>
 using namespace std;
 
-int sumOfPrimes(int n)
-{
-    bool prime[n + 1];
-    memset(prime, true, n + 1);
+bool isPrime(int n) {
+    if (n < 2)
+        return false;
+    for (int k = 2; k * k <= n; k++)
+        if (n % k == 0)
+            return false;
+    return true;
+}
 
-    for (int p = 2; p * p <= n; p++) {
-
-        if (prime[p] == true) {
-
-            for (int i = p * 2; i <= n; i += p)
-                prime[i] = false;
-        }
-    }
-
+int sumOfPrimes(int n) {
     int sum = 0;
-    for (int i = 2; i <= n; i++)
-        if (prime[i])
+    for (int i = 1; i <= n; i++)
+        if (isPrime(i))
             sum += i;
     return sum;
 }
 
-int main()
-{
- try{
-    int n;
-    cin>>n;
-    if(cin.fail()|| n<0|| n>pow(10,4)){
-        throw -1;
+int main() {
+    try {
+        int n;
+        cin >> n;
+        if (!cin || n < 0 || n > 10000) {
+            throw -1;
+        }
+        cout << sumOfPrimes(n) << "\n";
+    } catch (...) {
+        cout << "Invalid Input. Please Check The Question Description." << endl;
+        return 0;
     }
-    cout<< sumOfPrimes(n);
-}
-catch(...){
-    cout << "Invalid Input. Please Check The Question Description." << endl;
-    return 0;
-
-}
 }
