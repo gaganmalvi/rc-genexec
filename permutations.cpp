@@ -24,7 +24,7 @@ long long perm(string str) {
     long long f = 1;
     for (int i = 0; i < 26; i++)
         f *= fact(freq[i]);
-    return fact((long long)length) / f;
+    return (long long)fact((long long)length) / f;
 }
 
 int32_t main() {
