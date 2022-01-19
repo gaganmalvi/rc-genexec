@@ -24,7 +24,7 @@ long long perm(string str) {
     long long f = 1;
     for (int i = 0; i < 26; i++)
         f *= fact(freq[i]);
-    return (long long)fact((long long)length) / f;
+    return (long long)(fact((long long)length) / f);
 }
 
 int32_t main() {
@@ -39,7 +39,7 @@ int32_t main() {
     	for(int t = 0; t < test; t++) {
             string s;
             cin >> s;
-            int n = s.length();
+            int n = (int)s.length();
             if (!cin || n < 1 || n > 20)
                 throw -1;
             
