@@ -12,7 +12,7 @@ using namespace std;
 // clang-format on
 
 void solveMyProblem(long long n) {
-    int arr[n][n];
+    vector <vector <int> > arr(n, vector<int> (n, 0));
     for (int i = 0; i < n; i++) {
         for (int j = 0; j <= i; j++) {
             if (j == 0 || j == i) {
@@ -28,8 +28,6 @@ void solveMyProblem(long long n) {
 }
 
 int main() {
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
     FastIO;
     try {
         long long n;
