@@ -2,38 +2,50 @@
 #include <string>
 #include <unordered_map>
 using namespace std;
-bool checkAnagram(string a, string b) {
+bool checkAnagram(string a, string b)
+{
     size_t len1 = a.length();
     size_t len2 = b.length();
-    if (len1 != len2) {
+    if (len1 != len2)
+    {
         return false;
     }
     unordered_map<char, int> mp;
-    for (int i = 0; i < a.size(); i++) {
+    for (int i = 0; i < a.size(); i++)
+    {
         mp[a[i]]++;
         mp[b[i]]--;
     }
-    for (auto it : mp) {
+    for (auto it : mp)
+    {
         if (it.second)
             return false;
     }
     return true;
 }
-int main() {
-    try {
+int main()
+{
+    try
+    {
         string a, b;
         cin >> a;
         cin >> b;
-        if (cin.fail() || a.length() > 256 || b.length() > 256) {
+        if (cin.fail() || a.length() > 256 || b.length() > 256)
+        {
             throw -1;
         }
-        if (checkAnagram(a, b)) {
+        if (checkAnagram(a, b))
+        {
             cout << "YES";
-        } else {
+        }
+        else
+        {
             cout << "NO";
         }
         return 0;
-    } catch (...) {
+    }
+    catch (...)
+    {
         cout << "Invalid Input. Please Check The Question Description." << endl;
         return 0;
     }

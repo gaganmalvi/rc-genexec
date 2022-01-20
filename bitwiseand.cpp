@@ -1,42 +1,42 @@
-#include<iostream>
-#include<algorithm>
-#include<cmath>
+#include <iostream>
+#include <algorithm>
+#include <cmath>
 
 using namespace std;
+int main()
+{
+    try
+    {
+        int n;
+        cin >> n;
 
-bool bitwise(int a,int b){
-	cout << (a & b);
-	if((a & b) == 0){return true; }
-	return false;
-}
-
-int main(){
-    try{
-	    int n;
-	    cin >> n;
-
-	    if(n>1080) {
-            throw -1;
+        if (n > 1080 || n <= 0)
+        {
+            throw -2;
         }
 
-	    while(n--) {
-	        int a,b,c;
-	        cin >> a >> b >> c;
-	        if(cin.fail() || a > pow(10,4) || b > pow(10,4) || c > pow(10,4)) {
+        while (n--)
+        {
+            int a, b, c;
+            cin >> a >> b >> c;
+            if (cin.fail() || a > 10000 || b > 10000 || c > 10000 || a < 0 || b < 0 || c < 0)
+            {
                 throw -1;
             }
-	        int ans = a & b & c;
-	        if(ans == 0) {
-                cout<< "YES \n";
+            int ans = a & b & c;
+            if (ans == 0)
+            {
+                cout << "YES \n";
             }
-	        else {
-                cout<< "NO\n";
+            else
+            {
+                cout << "NO\n";
             }
         }
     }
-    catch(...) {
+    catch (...)
+    {
         cout << "Invalid Input. Please Check The Question Description." << endl;
         return 0;
     }
-
 }
