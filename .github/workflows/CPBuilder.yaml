@@ -2,9 +2,9 @@ name: CPBuild
 
 on:
   push:
-    branches: [trunk]
+    branches: [questions-round-1]
   pull_request:
-    branches: [trunk]
+    branches: [questions-round-1]
 
 jobs:
   build:
