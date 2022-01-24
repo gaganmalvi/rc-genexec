@@ -44,8 +44,6 @@ void solveMyProblem(int n) {
 }
 
 int main() {
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
     FastIO;
     try {
         long long n;
