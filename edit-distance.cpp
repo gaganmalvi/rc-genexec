@@ -17,7 +17,7 @@ int getMin(int a, int b, int c) {
 }
 
 void solve(string a, string b, int n1, int n2) {
-    vector<vector<int>> dp(2, vector<int>(n1+1));
+    vector<vector<int> > dp(2, vector<int>(n1+1));
 
     for(int i = 0; i <= n1; i++) {
         dp[0][i] = i;

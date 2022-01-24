@@ -14,7 +14,7 @@ int getMax(int a, int b) {
 }
 
 void solve(string a, string b, int n1, int n2) {
-    vector<vector<int>> dp(n1+1, vector<int>(n2+1));
+    vector<vector<int> > dp(n1+1, vector<int>(n2+1));
     
     for(int i = 0; i <= n1; i++) {
         for(int j = 0; j <= n2; j++) {

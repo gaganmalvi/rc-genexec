@@ -4,11 +4,11 @@ using namespace std;
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 
-bool isSymmetric(vector<vector<int>> matrix, int n) {
+bool isSymmetric(vector<vector<int> > matrix, int n) {
     return true;
 }
 
-void solve(vector<vector<int>> matrix, int n) {
+void solve(vector<vector<int> > matrix, int n) {
     // perform bfs
     int result = 1;
     int start = 0;
@@ -64,7 +64,7 @@ int main() {
                 throw -2;
             }
 
-            vector<vector<int>> matrix(n, vector<int>(n));
+            vector<vector<int> > matrix(n, vector<int>(n));
             for(int i = 0; i < n; i++) {
                 for(int j = 0; j < n; j++) {
                     cin >> matrix[i][j];
