@@ -1,25 +1,23 @@
-#include<iostream>
-#include<vector>
-#include<set>
+#include <iostream>
+#include <set>
+#include <vector>
 using namespace std;
 
+// clang-format off
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
+// clang-format on
 
 long long getGcd(long long x, long long y) {
-    if(y == 0) {
+    if (y == 0)
         return x;
-    }
-    return getGcd(y, x%y);
+    return getGcd(y, x % y);
 }
 
 void solve(vector<long long> vi, long long n) {
     // O(nlogn approach)
     long long lcm, gcd;
-
-    lcm = vi[0];
-    gcd = vi[0];
-
-    for(int i = 1; i < n; i++) {
+    lcm = vi[0], gcd = vi[0];
+    for (int i = 1; i < n; i++) {
         gcd = getGcd(vi[i], gcd);
         lcm = (vi[i] * lcm) / getGcd(vi[i], lcm);
     }
@@ -28,44 +26,28 @@ void solve(vector<long long> vi, long long n) {
 
 int main() {
     FastIO;
-
     try {
         int testcases;
         cin >> testcases;
-        if(!cin || testcases < 1 || testcases > 100) {
+        if (!cin || testcases < 1 || testcases > 100)
             throw -1;
-        }
-
-        for(int T = 0; T < testcases; T++) {
+        for (int T = 0; T < testcases; T++) {
             int n;
             cin >> n;
-            if(!cin || n < 1 || n > 5) {
+            if (!cin || n < 1 || n > 5)
                 throw -2;
-            }
-
-            
             set<long long> s;
-
-            for(int i = 0; i < n; i++) {
+            for (int i = 0; i < n; i++) {
                 long long tmp;
                 cin >> tmp;
                 s.insert(tmp);
-                if(!cin || tmp < 1 || tmp > 10000) {
+                if (!cin || tmp < 1 || tmp > 10000)
                     throw -3;
-                }
             }
-
-            vector<long long> vi;
-            for(auto x : s) {
-                vi.push_back(x);
-            }
-
+            vector<long long> vi(s.begin(), s.end());
             n = vi.size();
-
             solve(vi, n);
         }
-    } catch(...) {
-        cout << "Invalid Input. Please Check the Question Description.\n";
-    }
+    } catch (...) { cout << "Invalid Input. Please Check the Question Description.\n"; }
     return 0;
 }

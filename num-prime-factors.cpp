@@ -1,49 +1,40 @@
-#include<iostream>
-#include<math.h>
+#include <iostream>
+#include <math.h>
 using namespace std;
 
+// clang-format off
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
+// clang-format on
 
 bool isPrime(int n) {
-    for(int i = 2; i*i <= n+1; i++) {
-        if(n%i == 0) {
+    for (int i = 2; i * i <= n + 1; i++)
+        if (n % i == 0)
             return false;
-        }
-    }
     return true;
 }
 
 void solve(int n) {
     int ans = 0;
-    for(int i = 2; i <= n; i++) {
-        if(n%i == 0 && isPrime(i)) {
+    for (int i = 2; i <= n; i++)
+        if (n % i == 0 && isPrime(i))
             ans++;
-        }
-    }
     cout << ans << "\n";
 }
 
 int main() {
     FastIO;
-
     try {
         int testcases;
         cin >> testcases;
-        if(!cin || testcases < 1 || testcases > 50) {
+        if (!cin || testcases < 1 || testcases > 50)
             throw -1;
-        }
-
         int n;
-        for(int T = 0; T < testcases; T++) {
-
+        for (int T = 0; T < testcases; T++) {
             cin >> n;
-            if(!cin || n < 1 || n > round(pow(10,7))) {
+            if (!cin || n < 1 || n > round(pow(10, 7)))
                 throw -2;
-            }
             solve(n);
         }
-    } catch(...) {
-        cout << "Invalid Input. Please Check the Question Description.\n";
-    }
+    } catch (...) { cout << "Invalid Input. Please Check the Question Description.\n"; }
     return 0;
 }
