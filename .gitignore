@@ -1,2 +1,4 @@
 .vscode/settings.json
 .clang-format
+input.txt
+output.txt
