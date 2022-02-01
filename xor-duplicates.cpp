@@ -8,7 +8,6 @@
 #include <vector>
 #include <string>
 using namespace std;
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define el '\n'
 // clang-format on
 
@@ -21,19 +20,24 @@ void solveMyProblem(long long n, vector<long long> &arr) {
 }
 
 int main() {
-    FastIO;
     try {
-        long long n;
-        cin >> n;
-        if (!cin || (n < 3 || n > 100000) || (n % 2 == 0))
+        long long t;
+        cin >> t;
+        if (!cin || (t < 0 || t > 100))
             throw -1;
-        vector<long long> arr(n);
-        for (long long i = 0; i < n; i++) {
-            cin >> arr[i];
-            if ((!cin && i <= n - 1) || (arr[i] < 0 || arr[i] > 1000000000))
+        while (t--) {
+            long long n;
+            cin >> n;
+            if (!cin || (n < 3 || n > 100000) || (n % 2 == 0))
                 throw -1;
+            vector<long long> arr(n);
+            for (long long i = 0; i < n; i++) {
+                cin >> arr[i];
+                if ((!cin && i <= n - 1) || (arr[i] < 0 || arr[i] > 1000000000))
+                    throw -1;
+            }
+            solveMyProblem(n, arr);
         }
-        solveMyProblem(n, arr);
     } catch (...) { cout << "Invalid Input. Please Check The Question Description." << endl; }
     return 0;
 }

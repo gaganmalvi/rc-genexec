@@ -1,51 +1,42 @@
-#include <iostream>
-typedef long long int ll;
 #include <cmath>
-#define max 1000000000000000
+#include <iostream>
 using namespace std;
 
-ll gcd(ll a, ll b)
-{
+long long gcd(long long a, long long b) {
     if (a == 0)
         return b;
     return gcd(b % a, a);
 }
-ll commDiv(ll a, ll b)
-{
-    ll n = gcd(a, b);
-    ll result = 0;
-    for (ll i = 1; i <= sqrt(n); i++)
-    {
-        if (n % i == 0)
-        {
+
+long long commDiv(long long a, long long b) {
+    long long n = gcd(a, b), result = 0;
+    for (long long i = 1; i <= sqrt(n); i++) {
+        if (n % i == 0) {
             if (n / i == i)
-            {
                 result += 1;
-            }
             else
-            {
                 result += 2;
-            }
         }
     }
     return result;
 }
 
-int main()
-{
-    try
-    {
-        ll a, b;
-        cin >> a >> b;
-        if (a <= 0 || b <= 0 || a > max || b > max || cin.fail())
-        {
+int main() {
+    try {
+        long long n;
+        cin >> n;
+        if (!cin || (n < 0 || n > 100))
             throw -1;
+        while (n--) {
+            long long a, b;
+            cin >> a;
+            if (a <= 0 || a > 1000000000 || !cin)
+                throw -1;
+            cin >> b;
+            if (b <= 0 || b > 1000000000 || !cin)
+                throw -1;
+            cout << commDiv(a, b) << endl;
         }
-        cout << commDiv(a, b) << endl;
-    }
-    catch (...)
-    {
-        cout << "Invalid Input. Please Check The Question Description." << endl;
-        return 0;
-    }
+    } catch (...) { cout << "Invalid Input. Please Check The Question Description." << endl; }
+    return 0;
 }

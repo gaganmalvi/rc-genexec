@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 using namespace std;
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define el   '\n'
 // clang-format on
 
@@ -25,8 +24,7 @@ long long perm(string str) {
     return (long long)(fact((long long)length) / f);
 }
 
-int32_t main() {
-    FastIO;
+int main() {
     try {
         int test;
         cin >> test;
@@ -38,7 +36,6 @@ int32_t main() {
             int n = (int)s.length();
             if (!cin || n < 1 || n > 20)
                 throw -1;
-            // check if all letters are lowercase
             for (int i = 0; i < n; i++)
                 if (s[i] < 'a' || s[i] > 'z')
                     throw -2;

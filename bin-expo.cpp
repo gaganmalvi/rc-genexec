@@ -7,7 +7,6 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define el '\n'
 // clang-format on
 
@@ -22,25 +21,24 @@ long long pwr(long long a, long long b) {
     return res;
 }
 
-void solveMyProblem(vector<pair <long long, long long> > &arr) {
-    for (pair <long long, long long> i : arr)
+void solveMyProblem(vector<pair<long long, long long> > &arr) {
+    for (pair<long long, long long> i : arr)
         cout << pwr(i.first, i.second) << el;
 }
 
 int main() {
-    FastIO;
     try {
         long long n;
         cin >> n;
-        if (!cin || (n < 0 || n > 80000))
+        if (!cin || (n < 0 || n > 100))
             throw -1;
-        vector<pair <long long, long long> > arr(n);
+        vector<pair<long long, long long> > arr(n);
         for (long long i = 0; i < n; i++) {
             cin >> arr[i].first;
-            if ((!cin && i != n) || (arr[i].first< 0 || arr[i].first > 99))
+            if ((!cin && i != n) || (arr[i].first < 0 || arr[i].first > 99))
                 throw -1;
             cin >> arr[i].second;
-            if ((!cin && i != n) || (arr[i].second< 0 || arr[i].second > 9))
+            if ((!cin && i != n) || (arr[i].second < 0 || arr[i].second > 9))
                 throw -1;
         }
         solveMyProblem(arr);

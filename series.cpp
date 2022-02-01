@@ -1,24 +1,26 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-#define el   '\n'
+#define el '\n'
 
-int32_t main() {
-    FastIO;
-    istream &in(cin);
-    ostream &out(cout);
+int main() {
     try {
-        int x, y;
-        cin >> x >> y;
-        if (!cin || x < 1 || x > pow(10, 4) || y < 1 || y > pow(10, 5))
+        long long n;
+        cin >> n;
+        if (!cin || (n < 0 || n > 100))
             throw -1;
-
-        for (int i = 1; i <= y ; i++) {
-            cout << x*i + 1 << el;
+        while (n--) {
+            int x, y;
+            cin >> x;
+            if (!cin || x < 1 || x > 10000)
+                throw -1;
+            cin >> y;
+            if (!cin || y < 1 || y > 100000)
+                throw -1;
+            for (int i = 1; i <= y; i++)
+                cout << x * i + 1 << el;
         }
-    }
-    catch (...) {
+    } catch (...) {
         cout << "Invalid input. Please refer to the question description." << endl;
         return 0;
     }

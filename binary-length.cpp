@@ -4,7 +4,6 @@
 #include <math.h>
 #include <string>
 using namespace std;
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define el   '\n'
 // clang-format on
 
@@ -16,10 +15,7 @@ int dtb(int n) {
     return 0;
 }
 
-int32_t main() {
-    FastIO;
-    istream &in(cin);
-    ostream &out(cout);
+int main() {
     try {
         int n;
         cin >> n;
