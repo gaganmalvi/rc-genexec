@@ -24,10 +24,10 @@ int main() {
         while (n--) {
             string a, b;
             cin >> a;
-            if (!cin || a.length() > 256)
+            if (!cin || a.length() > 100)
                 throw -1;
             cin >> b;
-            if (!cin || b.length() > 256)
+            if (!cin || b.length() > 100)
                 throw -1;
             if (checkAnagram(a, b))
                 cout << "YES\n";
