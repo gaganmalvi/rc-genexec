@@ -28,7 +28,7 @@ int main() {
     try {
         long long n;
         cin >> n;
-        if (!cin || (n < 0 || n > 100000))
+        if (!cin || (n < 0 || n > 100))
             throw -1;
         vector<long long> arr(n);
         for (long long i = 0; i < n; i++) {
