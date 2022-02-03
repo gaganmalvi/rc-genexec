@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 3.10)
 project(genexec)
 
 set(CMAKE_BUILD_TYPE "Release")
-set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -s")
 
 file(GLOB SRC_FILES *.cpp)
