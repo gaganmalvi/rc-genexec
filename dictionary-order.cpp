@@ -8,7 +8,6 @@
 #include <vector>
 #include <string>
 using namespace std;
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define el '\n'
 // clang-format on
 
@@ -22,7 +21,6 @@ void solveMyProblem(string s) {
 }
 
 int main() {
-    FastIO;
     try {
         string s;
         cin >> s;

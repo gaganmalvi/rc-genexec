@@ -3,10 +3,6 @@
 #include <vector>
 using namespace std;
 
-// clang-format off
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-// clang-format on
-
 int getMin(int a, int b, int c) {
     int res = a;
     if (b < res)
@@ -34,7 +30,6 @@ void solve(string a, string b, int n1, int n2) {
 }
 
 int main() {
-    FastIO;
     try {
         int testcases;
         cin >> testcases;

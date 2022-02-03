@@ -2,10 +2,6 @@
 #include <math.h>
 using namespace std;
 
-// clang-format off
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-// clang-format on
-
 void solve(long long n) {
     long long p1 = round(log2(n)), p2 = round(log2(n)) + 1;
     long long ans1 = abs(round(pow(2, p1)) - n), ans2 = abs(round(pow(2, p2)) - n);
@@ -16,7 +12,6 @@ void solve(long long n) {
 }
 
 int main() {
-    FastIO;
     try {
         int testcases;
         cin >> testcases;

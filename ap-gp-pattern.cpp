@@ -7,7 +7,6 @@ void solve(long long a, long long b, long long c, long long d, long long n) {
             std::cout << a << " ";
             a += c;
         } else {
-            // GP
             std::cout << b << " ";
             b *= d;
         }

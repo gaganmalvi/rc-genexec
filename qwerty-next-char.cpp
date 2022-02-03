@@ -3,10 +3,6 @@
 #include <unordered_map>
 using namespace std;
 
-// clang-format off
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-// clang-format on
-
 void solve(string s, int n, unordered_map<char, char> map) {
     for (int i = 0; i < n; i++)
         cout << map[s[i]];
@@ -14,7 +10,6 @@ void solve(string s, int n, unordered_map<char, char> map) {
 }
 
 int main() {
-    FastIO;
     unordered_map<char, char> map;
     char values[26] = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l',
         'z', 'x', 'c', 'v', 'b', 'n', 'm'};

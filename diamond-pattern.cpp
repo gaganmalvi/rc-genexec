@@ -1,8 +1,5 @@
 #include <iostream>
 using namespace std;
-// clang-format off
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-// clang-format on
 
 void solve(long long n) {
     int k = 2 * n;
@@ -31,7 +28,6 @@ void solve(long long n) {
 }
 
 int main() {
-    FastIO;
     try {
         int testcases;
         cin >> testcases;

@@ -3,10 +3,6 @@
 #include <vector>
 using namespace std;
 
-// clang-format off
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-// clang-format on
-
 void solve(string a, string b, int n1, int n2) {
     vector<vector<int> > dp(n1 + 1, vector<int>(n2 + 1));
     for (int i = 0; i <= n1; i++) {
@@ -23,7 +19,6 @@ void solve(string a, string b, int n1, int n2) {
 }
 
 int main() {
-    FastIO;
     try {
         int testcases;
         cin >> testcases;

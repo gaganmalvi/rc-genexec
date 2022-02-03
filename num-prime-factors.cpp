@@ -2,10 +2,6 @@
 #include <math.h>
 using namespace std;
 
-// clang-format off
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-// clang-format on
-
 bool isPrime(int n) {
     for (int i = 2; i * i <= n + 1; i++)
         if (n % i == 0)
@@ -22,7 +18,6 @@ void solve(int n) {
 }
 
 int main() {
-    FastIO;
     try {
         int testcases;
         cin >> testcases;

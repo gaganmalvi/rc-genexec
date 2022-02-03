@@ -8,7 +8,6 @@
 using namespace std;
 
 // clang-format off
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define el '\n'
 // clang-format on
 
@@ -41,7 +40,6 @@ void solve() {
 }
 
 int main() {
-    FastIO;
     try {
         for (int i = 0; i < 4; i++) {
             if (i == 0)

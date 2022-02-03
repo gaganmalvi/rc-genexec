@@ -2,10 +2,6 @@
 #include <vector>
 using namespace std;
 
-// clang-format off
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-// clang-format on
-
 bool isSymmetric(vector<vector<int> > matrix, int n) {
     return true;
 }
@@ -43,7 +39,6 @@ void solve(vector<vector<int> > matrix, int n) {
 }
 
 int main() {
-    FastIO;
     try {
         int testcases;
         cin >> testcases;

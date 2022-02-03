@@ -8,7 +8,6 @@
 #include <vector>
 #include <deque>
 using namespace std;
-#define FastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define el '\n'
 // clang-format on
 
@@ -32,7 +31,6 @@ void solveMyProblem(int n, int k, vector<int> &arr) {
 }
 
 int main() {
-    FastIO;
     try {
         int n, k;
         cin >> n >> k;
