@@ -40,27 +40,21 @@ void solve(vector<vector<int> > matrix, int n) {
 
 int main() {
     try {
-        int testcases;
-        cin >> testcases;
-        if (!cin || testcases < 1 || testcases > 20)
-            throw -1;
         int n;
-        for (int T = 0; T < testcases; T++) {
-            cin >> n;
-            if (!cin || n < 1 || n > 100)
-                throw -2;
-            vector<vector<int> > matrix(n, vector<int>(n));
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                    cin >> matrix[i][j];
-                    if (!cin || matrix[i][j] != 0 && matrix[i][j] != 1)
-                        throw -3;
-                }
+        cin >> n;
+        if (!cin || n < 1 || n > 100)
+            throw -2;
+        vector<vector<int> > matrix(n, vector<int>(n));
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                cin >> matrix[i][j];
+                if (!cin || matrix[i][j] != 0 && matrix[i][j] != 1)
+                    throw -3;
             }
-            if (!isSymmetric(matrix, n))
-                throw -4;
-            solve(matrix, n);
         }
+        if (!isSymmetric(matrix, n))
+            throw -4;
+        solve(matrix, n);
     } catch (...) { cout << "Invalid Input. Please Check the Question Description.\n"; }
     return 0;
 }
