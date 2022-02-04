@@ -10,7 +10,6 @@ long long getGcd(long long x, long long y) {
 }
 
 void solve(vector<long long> vi, long long n) {
-    // O(nlogn approach)
     long long lcm, gcd;
     lcm = vi[0], gcd = vi[0];
     for (int i = 1; i < n; i++) {

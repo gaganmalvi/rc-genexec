@@ -11,11 +11,9 @@ void solve(string s, int n, unordered_map<char, char> map) {
 
 int main() {
     unordered_map<char, char> map;
-    char values[26] = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l',
-        'z', 'x', 'c', 'v', 'b', 'n', 'm'};
+    string values = "qwertyuiopasdfghjklzxcvbnm";
     for (int i = 0; i < 26; i++)
-        if (i != 25)
-            map[values[i]] = values[(i + 1) % 26];
+        map[values[i]] = values[(i + 1) % 26];
     try {
         int testcases;
         cin >> testcases;
