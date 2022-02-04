@@ -20,7 +20,6 @@ int main() {
                     throw -2;
                 result[i] = s[i];
             }
-            result[n] = '\0';
             int prev = 1, current = 2;
             result[0] = result[0] - 32;
             std::cout << result[0];
@@ -36,7 +35,7 @@ int main() {
                 }
                 std::cout << result[i];
             }
-            std::cout << result[n] << "\n";
+            std::cout << "\n";
             delete[] result;
         }
     } catch (...) { std::cout << "Invalid input. Please refer to the question description.\n"; }

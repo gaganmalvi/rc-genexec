@@ -19,9 +19,15 @@ int main() {
     try {
         int n;
         cin >> n;
-        if (!cin || n < 0 || n > 1000000)
+        if (!cin || n < 0 || n > 2000)
             throw -1;
-        cout << dtb(n) << el;
+        while (n--) {
+            int x;
+            cin >> x;
+            if (!cin || x < 0 || x > 1000000)
+                throw -1;
+            cout << dtb(x) << el;
+        }
     } catch (...) {
         cout << "Invalid input. Please refer to the question description." << endl;
         return 0;
